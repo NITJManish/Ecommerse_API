@@ -249,11 +249,7 @@ app.post("/getcartdata",fetchUser,async (req,res)=>{
     res.json(userdata.cartData);
 })
 
-//for deployment
 
-if(process.env.NODE_ENV=='production'){
-    app.use(express.static("front/build"));
-}
 
 app.listen(port,(err)=>{
     if(!err){
